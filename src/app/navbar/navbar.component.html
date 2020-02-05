@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#"><div class="glyphicon glyphicon-align-justify"></div> </a></li>
+         
+        <li><a class="navbar-brand" href="#"><app-logo></app-logo></a></li>
+        <li>
+           <form class="navbar-form navbar-right" role="search">
+            <div class="form-group input-group">
+              <input [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}" type="text" class="form-control Search-Field" placeholder="Search..">
+              <!-- <p [style.color]="searchText === 'Banumathy' ? 'red' :'green'"> {{searchText}}</p> -->
+              <!-- <p [ngStyle]="errorText">{{searchText}}</p> -->
+              <!-- <p [ngStyle]="searchText === 'banu' ? errorText : successText ">{{searchText}}</p> -->
+              <p [ngStyle]="setMystyle()" >{{searchText}}</p>
+              <!-- <P *ngIf="searchText === 'Angular'|| searchText === 'angular' ">this is angular banu</P>  -->
+              <!-- <P *ngIf="searchText.toLowerCase() === 'angular'">this is angular</P>  -->
+
+              <!-- <p *ngIf="searchText.toLowerCase() === 'node'"> this is Node</p> -->
+              <!-- <p *ngIf="searchText.toUpperCase() === 'YOUTUBE'">this is YouTube</p> -->
+              <!-- <ng-template #angular>
+                <p>this is Angular</p>
+              </ng-template>
+              <ng-template #node>
+                <p>this is Node</p>
+              </ng-template> -->
+              <!-- <p *ngIf="searchText.toLowerCase() === 'angular'; then angular; else node"></p> -->
+              <div [ngSwitch]="searchText.toLowerCase()">
+                <p *ngSwitchCase="'angular'">You have written Angular</p>
+                <p *ngSwitchCase="'node'">You have written node</p>
+                <p *ngSwitchCase="'youtube'">You have written youtube</p>
+                <p *ngSwitchDefault>doesn't match keyword</p>
+              </div>
+
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" >
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>        
+            </div>
+          </form>
+          
+        </li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><div class="glyphicon glyphicon-th"></div>	</a></li>
+        <li><a href="#"><div class="glyphicon glyphicon-expand"></div>	</a></li>
+        
+      </ul>
+      
+    </div>
+  </nav>

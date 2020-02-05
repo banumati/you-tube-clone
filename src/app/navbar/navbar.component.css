@@ -1,0 +1,8 @@
+.navbar-default
+{
+    background-color: #fff !important;
+    border-color:#fff !important;
+}
+.navbar-form .input-group > .form-control {
+width: 700px;
+}
