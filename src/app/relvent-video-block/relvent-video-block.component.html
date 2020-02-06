@@ -1,6 +1,6 @@
 <div class="ReleventVideo">
-    <p class="text-left"><strong>Upnext</strong></p>
-    <div class="row">
+  <p class="text-left"><strong>Upnext</strong></p>
+  <!-- <div class="row">
         <div class="col-sm-4">
             <img class ="UpNextVideo" src= "assets/video.png">
         </div>
@@ -71,7 +71,22 @@
             <p><strong>Angular 8 - Property binding</strong>Angular 8</p>
             <p>20 views</p>
         </div>
+    </div> -->
+  <!-- <div *ngFor="let list of product">
+        <img [src]='list.url' />
+    </div> -->
+  <!-- {{upnexts |json}} -->
+ 
+  <div class="row" *ngFor="let upnext of upnexts">
+    <div class="col-sm-4">
+      <img class="UpNextVideo" [src]="upnext.video">
     </div>
+    <div class="col-sm-8">
+      <p><strong>{{upnext.name}}</strong> - Angular 8</p>
+      <p>{{upnext.views}}</p>
+    </div>
+  </div>
 
-        
-   </div>
+
+
+</div>

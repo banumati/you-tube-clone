@@ -9,6 +9,8 @@ import { VideoContainerComponent } from './video-container/video-container.compo
 import { CommentSecComponent } from './comment-sec/comment-sec.component';
 import { AdBlockComponent } from './ad-block/ad-block.component';
 import { RelventVideoBlockComponent } from './relvent-video-block/relvent-video-block.component';
+import { NextupService } from './nextup.service';
+import { CommentsService } from './comments.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { RelventVideoBlockComponent } from './relvent-video-block/relvent-video-
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [NextupService,CommentsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

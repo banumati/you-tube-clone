@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NextupService } from '../nextup.service';
 
 @Component({
   selector: 'app-relvent-video-block',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RelventVideoBlockComponent implements OnInit {
 
-  constructor() { }
+  public upnexts = [];
+
+  constructor(private _upnext: NextupService) { }
 
   ngOnInit() {
+    this.upnexts = this._upnext.getUpnext();
+    console.log(this._upnext.getUpnext())
+
   }
 
 }
