@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoContainerComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit() {
